@@ -439,4 +439,18 @@ home-content h1 {
      }
 }
 
+/* Additional style for the clock and date in the header */
+.clock {
+    color: var(--main-color);
+    font-size: 2rem;
+    margin-right: .2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+}
+
+.date {
+    color: var(--main-color) ;
+    font-size: 2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 

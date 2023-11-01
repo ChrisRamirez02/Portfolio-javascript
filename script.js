@@ -55,3 +55,33 @@ document.getElementById('telegramIcon').addEventListener('click', function(event
     event.preventDefault();
     window.open('https://telegram.org', '_blank');
 });
+
+function displayDateTime() {
+    const clock = document.getElementById('digital-clock');
+    const currentDate = new Date();
+
+    const hours = currentDate.getHours();
+    const minutes = currentDate.getMinutes();
+    const seconds = currentDate.getSeconds();
+
+    const formattedHours = hours < 10 ? `0${hours}` : hours;
+    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
+    const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+
+    const day = currentDate.getDate();
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June", "July",
+        "August", "September", "October", "November", "December"
+    ];
+    const month = monthNames[currentDate.getMonth()];
+    const year = currentDate.getFullYear();
+
+    clock.innerHTML = `
+        <span class="clock" style="font-size: 2.5rem;">${formattedHours}:${formattedMinutes}:${formattedSeconds}</span>
+        <span class="date" style="font-size: 1.5rem;">${month} ${day}, ${year}</span>
+    `;
+}
+
+setInterval(displayDateTime, 1000);
+
+displayDateTime();
