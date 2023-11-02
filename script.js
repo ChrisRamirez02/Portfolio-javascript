@@ -6,7 +6,7 @@ menuIcon.onclick = () => {
     navbar.classList.toggle('active');
 };
 
-
+      //objects
 let sections = document.querySelectorAll('section');
 let navlinks = document.querySelectorAll('header nav a');
 
@@ -84,4 +84,4 @@ function displayDateTime() {
 
 setInterval(displayDateTime, 1000);
 
-displayDateTime();
+displayDateTime(); //functions
