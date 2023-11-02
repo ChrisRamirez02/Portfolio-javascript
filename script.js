@@ -35,7 +35,7 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 };
     
-// Add event listeners to open social media links in new tabs
+
 document.getElementById('facebookIcon').addEventListener('click', function(event) {
     event.preventDefault();
     window.open('https://www.facebook.com', '_blank');
